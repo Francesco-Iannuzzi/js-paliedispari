@@ -25,9 +25,40 @@ Tools:
 
 */
 
+//creare un array dove inserire le singole lettere della parola inserita dall'utente
+const userWordArray = [];
+
+//creare un array dove inserire le singole lettere della parola inserita dall'utente ma al contrario
+const userWordArrayReverse = [];
+
 //chiedere all'utente di inserire una parola e salvarla in una variabile
+const userWord = prompt('Scrivi una parola');
+//console.log(userWord);
+
+
+for (let i = 0; i < userWord.length; i++) {
+    const letter = userWord[i];
+    console.log(letter);
+    userWordArray.push(userWord[i]);
+    userWordArrayReverse.unshift(userWord[i]);
+}
+
+console.log(userWordArray);
+console.log(userWordArrayReverse);
+
+
 //creare una funzione per capire se la parola è palindroma
 
+
+
+
+
+
+
+
+
+
+/*
 //chiedere all'utente di scegliere tra pari e dispari e salviamo la sua scelta
 let userChoice = prompt('pari o dispari?');
 
@@ -83,3 +114,4 @@ if (userChoice == result) {
 } else {
     console.log('HAI PERSO');
 }
+*/
