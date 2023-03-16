@@ -30,10 +30,9 @@ Tools:
 
 //chiedere all'utente di scegliere tra pari e dispari e salviamo la sua scelta
 let userChoice = prompt('pari o dispari?');
+
 if (userChoice !== 'pari' && userChoice !== 'dispari') {
     alert('Devi scegliere tra pari e dispari');
-    const userChoice = prompt('pari o dispari?');
-    console.log(userChoice);
 
 } else {
     console.log(userChoice);
@@ -45,37 +44,42 @@ console.log(userNumber);
 
 //generare un numero random da 1 a 5 per il computer usando una funzione
 
-function generateRandomNumber() {
-    return Math.ceil(Math.random() * 5);
+function generateRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
 
 }
 
-const computerNumber = generateRandomNumber();
+const computerNumber = generateRandomNumber(5);
 console.log(computerNumber);
 
 //sommiamo i due numeri e salviamoli in una variabile
 let sum = userNumber + computerNumber;
 console.log(sum);
 
-//creare una funzione per controllare se la somma di due numeri è pari
+//creare una funzione per controllare se un numero è pari
 function isEven(numb) {
 
-    if (sum % 2 === 0) {
+    if (numb % 2 === 0) {
         console.log('pari');
         return true;
+
     } else {
         console.log('dispari');
         return false;
     }
 }
 
-isEven(sum);
-
 //se la scelta tra pari e dispari dell'utente è uguale al valore del risultato ottenuto
-if ((userChoice = 'pari' && isEven == true) || (userChoice = 'dispari' && isEven == false)){
+
+let result = 'dispari';
+
+if (isEven(sum)) {
+    result = 'pari';
+}
+
+
+if (userChoice == result) {
     console.log('HAI VINTO');
-    
-    //altrimenti ha vinto il computer
 } else {
     console.log('HAI PERSO');
 }
