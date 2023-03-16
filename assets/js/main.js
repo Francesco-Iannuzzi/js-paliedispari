@@ -25,29 +25,22 @@ Tools:
 
 */
 
-//creare un array dove inserire le singole lettere della parola inserita dall'utente
-const userWordArray = [];
 
-//creare un array dove inserire le singole lettere della parola inserita dall'utente ma al contrario
-const userWordArrayReverse = [];
-
-//chiedere all'utente di inserire una parola e salvarla in una variabile
-const userWord = prompt('Scrivi una parola');
-//console.log(userWord);
-
-
-for (let i = 0; i < userWord.length; i++) {
-    const letter = userWord[i];
-    console.log(letter);
-    userWordArray.push(userWord[i]);
-    userWordArrayReverse.unshift(userWord[i]);
+function checkPalindrome(word) {
+    for (let i = 0; i < word.length; i++) {
+        const letter = word[i];
+        console.log(letter);
+    }
+    
+    
+    for (let j = word.length - 1; j > - 1; j--) {
+        const letterReverse = word[j];
+        console.log(letterReverse);
+    }
+    
 }
 
-console.log(userWordArray);
-console.log(userWordArrayReverse);
-
-
-//creare una funzione per capire se la parola è palindroma
+checkPalindrome(userWord = prompt('Scrivi una parola'));
 
 
 
