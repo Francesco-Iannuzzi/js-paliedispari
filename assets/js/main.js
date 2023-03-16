@@ -27,7 +27,7 @@ Tools:
 */
 
 // Exercise 1
-
+/*
 function checkPalindrome(word) {
     for (let i = 0; i < word.length; i++) {
         const letter = word[i];
@@ -42,8 +42,21 @@ function checkPalindrome(word) {
 }
 
 checkPalindrome(userWord = prompt('Scrivi una parola'));
+*/
 
 
+function checkPalindrome(word) {
+    const reverseWord = word.split("").reverse().join("");
+
+    if (word === reverseWord) {
+        console.log(`${word} è palindroma.`);
+    } else {
+        console.log(`${word} non è palindroma.`);
+    }
+
+}
+
+checkPalindrome(userWord = prompt('Scrivi una parola'));
 
 
 
