@@ -1,4 +1,5 @@
 /*
+
 Consegna:
 
 1) Palidroma
@@ -11,7 +12,7 @@ Consigli del giorno
 - Scriviamo sempre in italiano i passaggi che vogliamo fare
 - Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
- */
+*/
 
 /*
 
@@ -25,19 +26,19 @@ Tools:
 
 */
 
+// Exercise 1
 
 function checkPalindrome(word) {
     for (let i = 0; i < word.length; i++) {
         const letter = word[i];
         console.log(letter);
     }
-    
-    
+
+
     for (let j = word.length - 1; j > - 1; j--) {
         const letterReverse = word[j];
         console.log(letterReverse);
     }
-    
 }
 
 checkPalindrome(userWord = prompt('Scrivi una parola'));
@@ -46,12 +47,8 @@ checkPalindrome(userWord = prompt('Scrivi una parola'));
 
 
 
+// Exercise 2
 
-
-
-
-
-/*
 //chiedere all'utente di scegliere tra pari e dispari e salviamo la sua scelta
 let userChoice = prompt('pari o dispari?');
 
@@ -107,4 +104,3 @@ if (userChoice == result) {
 } else {
     console.log('HAI PERSO');
 }
-*/
